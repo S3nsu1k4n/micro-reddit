@@ -1,6 +1,6 @@
-class Post < ApplicationRecord
+class Comment < ApplicationRecord
+  belongs_to :post
   belongs_to :user
-  has_many :comments
 
   validates :title, :body, presence: true
   validates :title, length: { in: 3..16 }
